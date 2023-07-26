@@ -56,6 +56,7 @@ class _ExamplePageState extends State<ExamplePage> {
               PlutoLayoutTabItem(
                 id: 'top1',
                 title: 'top1',
+                titleStyle: const TextStyle(color: Colors.red),
                 tabViewWidget: const Text('top1'),
               ),
               PlutoLayoutTabItem(

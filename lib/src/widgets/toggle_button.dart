@@ -8,9 +8,12 @@ class ToggleButton extends StatelessWidget {
     this.trailing,
     this.changed,
     super.key,
+    this.titleStyle,
   });
 
   final String title;
+
+  final TextStyle? titleStyle;
 
   final bool enabled;
 
@@ -36,11 +39,19 @@ class ToggleButton extends StatelessWidget {
       ),
     );
 
-    Widget label = Text(title);
+    Widget label = Text(
+      title,
+      style: titleStyle,
+    );
 
     if (trailing != null) {
       label = Row(children: [label, trailing!]);
     }
+
+    // return Container(
+    //   color: Colors.white,
+    //   child: Row()
+    // );
 
     return icon != null
         ? TextButton.icon(

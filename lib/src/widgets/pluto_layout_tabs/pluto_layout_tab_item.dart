@@ -10,6 +10,8 @@ part of pluto_layout_tabs;
 /// [title]
 /// {@macro pluto_layout_tab_item_title}
 ///
+/// [titleStyle]
+///
 /// [icon]
 /// {@macro pluto_layout_tab_item_icon}
 ///
@@ -31,6 +33,7 @@ class PlutoLayoutTabItem {
   PlutoLayoutTabItem({
     required this.id,
     required this.title,
+    this.titleStyle,
     this.icon,
     this.tabViewWidget,
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
@@ -41,6 +44,7 @@ class PlutoLayoutTabItem {
   PlutoLayoutTabItem._({
     required this.id,
     required this.title,
+    this.titleStyle,
     this.icon,
     this.tabViewWidget,
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
@@ -58,6 +62,8 @@ class PlutoLayoutTabItem {
   /// [title] is the title of the menu to be displayed.
   /// {@endtemplate}
   final String title;
+
+  final TextStyle? titleStyle;
 
   /// {@template pluto_layout_tab_item_icon}
   /// [icon] is the icon to display before the menu title.
@@ -148,6 +154,7 @@ class PlutoLayoutTabItem {
   PlutoLayoutTabItem copyWith({
     Object? id,
     String? title,
+    TextStyle? titleStyle,
     Widget? icon,
     Widget? tabViewWidget,
     PlutoLayoutTabItemSizeResolver? sizeResolver,
@@ -158,6 +165,7 @@ class PlutoLayoutTabItem {
     return PlutoLayoutTabItem._(
       id: id ?? this.id,
       title: title ?? this.title,
+      titleStyle: titleStyle ?? this.titleStyle,
       icon: icon ?? this.icon,
       tabViewWidget: tabViewWidget ?? this.tabViewWidget,
       sizeResolver: sizeResolver ?? this.sizeResolver,
