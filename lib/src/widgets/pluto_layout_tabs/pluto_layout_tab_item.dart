@@ -40,7 +40,7 @@ class PlutoLayoutTabItem {
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
     this.showRemoveButton = false,
     this.enabled = false,
-    this.enabledColor = Colors.white,
+    this.enabledColor,
   });
 
   PlutoLayoutTabItem._({
@@ -52,7 +52,7 @@ class PlutoLayoutTabItem {
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
     this.showRemoveButton = false,
     this.enabled = false,
-    this.enabledColor = Colors.white,
+    this.enabledColor,
     double? size,
   }) : _size = size ?? 0;
 
@@ -113,7 +113,7 @@ class PlutoLayoutTabItem {
   /// [enabled] The open and closed state of the tab view.
   /// {@endtemplate}
   final bool enabled;
-  final Color enabledColor;
+  final Color? enabledColor;
 
   /// {@template pluto_layout_tab_item_maintainState}
   /// If [tabViewWidget.key] is [GlobalKey], the state is maintained
