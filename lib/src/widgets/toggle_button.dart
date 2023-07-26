@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 class ToggleButton extends StatelessWidget {
   const ToggleButton({
     required this.title,
+    this.titleStyle,
     required this.enabled,
+    this.enabledColor,
     this.icon,
     this.trailing,
     this.changed,
     super.key,
-    this.titleStyle,
   });
 
   final String title;
@@ -16,6 +17,8 @@ class ToggleButton extends StatelessWidget {
   final TextStyle? titleStyle;
 
   final bool enabled;
+
+  final Color? enabledColor;
 
   final Widget? icon;
 
@@ -32,8 +35,8 @@ class ToggleButton extends StatelessWidget {
     final theme = Theme.of(context);
 
     final style = TextButton.styleFrom(
-      foregroundColor:
-          enabled ? theme.colorScheme.secondary : theme.disabledColor,
+      foregroundColor: enabled ? enabledColor : theme.disabledColor,
+      // enabled ? theme.colorScheme.secondary : theme.disabledColor,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.zero,
       ),

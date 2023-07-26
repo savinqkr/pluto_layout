@@ -451,6 +451,7 @@ class _MenuContainer extends ConsumerWidget {
               )
             : null,
         enabled: item.enabled,
+        enabledColor: item.enabledColor,
         changed: (flag) => toggleTab(item, flag),
       ),
     );
