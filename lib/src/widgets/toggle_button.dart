@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class ToggleButton extends StatelessWidget {
   const ToggleButton({
-    required this.title,
-    this.titleStyle,
+    required this.label,
     required this.enabled,
     this.enabledColor,
     this.icon,
@@ -12,9 +11,7 @@ class ToggleButton extends StatelessWidget {
     super.key,
   });
 
-  final String title;
-
-  final TextStyle? titleStyle;
+  final Widget label;
 
   final bool enabled;
 
@@ -43,13 +40,14 @@ class ToggleButton extends StatelessWidget {
       ),
     );
 
-    Widget label = Text(
-      title,
-      style: titleStyle,
-    );
+    // Widget label = Text(
+    //   title,
+    //   style: titleStyle,
+    // );
+    Widget textbuttonLabel = label;
 
     if (trailing != null) {
-      label = Row(children: [label, trailing!]);
+      textbuttonLabel = Row(children: [label, trailing!]);
     }
 
     // return Container(
@@ -62,12 +60,12 @@ class ToggleButton extends StatelessWidget {
             style: style,
             icon: icon!,
             onPressed: onTap,
-            label: label,
+            label: textbuttonLabel,
           )
         : TextButton(
             style: style,
             onPressed: onTap,
-            child: label,
+            child: textbuttonLabel,
           );
   }
 }

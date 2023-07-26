@@ -23,7 +23,7 @@ void main() {
           items: [
             PlutoLayoutTabItem(
               id: 'tab1',
-              title: 'tab1',
+              label: const Text('tab1'),
               tabViewWidget: const Text('tab1 view'),
             ),
           ],
@@ -50,7 +50,7 @@ void main() {
           items: [
             PlutoLayoutTabItem(
               id: 'tab1',
-              title: 'tab1',
+              label: const Text('tab1'),
               showRemoveButton: true,
               tabViewWidget: const Text('tab1 view'),
             ),
@@ -74,7 +74,7 @@ void main() {
           items: [
             PlutoLayoutTabItem(
               id: 'tab1',
-              title: 'tab1',
+              label: const Text('tab1'),
               showRemoveButton: false,
               tabViewWidget: const Text('tab1 view'),
             ),
@@ -97,7 +97,7 @@ void main() {
           items: [
             PlutoLayoutTabItem(
               id: 'tab1',
-              title: 'tab1',
+              label: const Text('tab1'),
               showRemoveButton: true,
               tabViewWidget: const Text('tab1 view'),
             ),
@@ -129,13 +129,13 @@ void main() {
             items: [
               PlutoLayoutTabItem(
                 id: 'tab1',
-                title: 'tab1',
+                label: const Text('tab1'),
                 showRemoveButton: true,
                 tabViewWidget: const Text('tab1 view'),
               ),
               PlutoLayoutTabItem(
                 id: 'tab2',
-                title: 'tab2',
+                label: const Text('tab2'),
                 showRemoveButton: true,
                 tabViewWidget: const Text('tab2 view'),
               ),
@@ -178,13 +178,13 @@ void main() {
             items: [
               PlutoLayoutTabItem(
                 id: 'tab1',
-                title: 'tab1',
+                label: const Text('tab1'),
                 showRemoveButton: true,
                 tabViewWidget: const Text('tab1 view'),
               ),
               PlutoLayoutTabItem(
                 id: 'tab2',
-                title: 'tab2',
+                label: const Text('tab2'),
                 enabled: true,
                 showRemoveButton: true,
                 tabViewWidget: const Text('tab2 view'),

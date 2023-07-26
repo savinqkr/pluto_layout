@@ -435,8 +435,7 @@ class _MenuContainer extends ConsumerWidget {
         ),
       ),
       child: ToggleButton(
-        title: item.title,
-        titleStyle: item.titleStyle,
+        label: item.label,
         icon: item.icon,
         trailing: item.showRemoveButton
             ? IconButton(

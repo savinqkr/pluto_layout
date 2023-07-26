@@ -55,14 +55,13 @@ class _ExamplePageState extends State<ExamplePage> {
             items: [
               PlutoLayoutTabItem(
                 id: 'top1',
-                title: 'top1',
-                titleStyle: const TextStyle(fontSize: 20),
+                label: const Text('top1', style: TextStyle(fontSize: 40)),
                 tabViewWidget: const Text('top1'),
                 // enabledColor: Colors.white,
               ),
               PlutoLayoutTabItem(
                 id: 'top2',
-                title: 'top2',
+                label: const Text('top2'),
                 tabViewWidget: const Text('top2'),
                 // enabledColor: Colors.white,
               ),
@@ -74,13 +73,13 @@ class _ExamplePageState extends State<ExamplePage> {
             items: [
               PlutoLayoutTabItem(
                 id: 'left1',
-                title: 'left1',
+                label: const Text('left1', style: TextStyle(fontSize: 40)),
                 tabViewWidget: const Text('left1'),
                 enabledColor: Colors.blue,
               ),
               PlutoLayoutTabItem(
                 id: 'left2',
-                title: 'left2',
+                label: const Text('left2'),
                 tabViewWidget: const Text('left2'),
                 enabledColor: Colors.blue,
               ),
@@ -92,13 +91,13 @@ class _ExamplePageState extends State<ExamplePage> {
             items: [
               PlutoLayoutTabItem(
                 id: 'right1',
-                title: 'right1',
+                label: const Text('right1', style: TextStyle(fontSize: 40)),
                 tabViewWidget: const Text('right1'),
                 enabledColor: Colors.orange,
               ),
               PlutoLayoutTabItem(
                 id: 'right2',
-                title: 'right2',
+                label: const Text('right2'),
                 tabViewWidget: const Text('right2'),
                 enabledColor: Colors.orange,
               ),
@@ -110,13 +109,13 @@ class _ExamplePageState extends State<ExamplePage> {
             items: [
               PlutoLayoutTabItem(
                 id: 'bottom1',
-                title: 'bottom1',
+                label: const Text('bottom1'),
                 tabViewWidget: const Text('bottom1'),
                 enabledColor: Colors.teal,
               ),
               PlutoLayoutTabItem(
                 id: 'bottom2',
-                title: 'bottom2',
+                label: const Text('bottom2'),
                 tabViewWidget: const Text('bottom2'),
                 enabledColor: Colors.teal,
               ),
