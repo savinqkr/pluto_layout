@@ -430,7 +430,17 @@ class _MenuContainer extends ConsumerWidget {
             layoutId: layoutId,
             itemId: item.id,
           )
-              ? BorderSide(width: 3, color: theme.colorScheme.secondary)
+              ? BorderSide(
+                  width: 3,
+                  // 원본 코드
+                  // color: theme.colorScheme.secondary,
+
+                  // ----- 수정한 부분 * 탭 타이틀 색상 변경 * -----
+                  color: item.enabledColor.isUndefinedOrNull
+                      ? theme.colorScheme.secondary
+                      : item.enabledColor!,
+                  // ---------------------------------------------
+                )
               : BorderSide.none,
         ),
       ),
