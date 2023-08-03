@@ -433,13 +433,13 @@ class _MenuContainer extends ConsumerWidget {
               ? BorderSide(
                   width: 3,
                   // 원본 코드
-                  // color: theme.colorScheme.secondary,
+                  color: theme.colorScheme.secondary,
 
-                  // ----- 수정한 부분 * 탭 타이틀 색상 변경 * -----
-                  color: item.enabledColor.isUndefinedOrNull
-                      ? theme.colorScheme.secondary
-                      : item.enabledColor!,
-                  // ---------------------------------------------
+                  // // ----- 수정한 부분 * 탭 타이틀 색상 변경 * -----
+                  // color: item.enabledColor.isUndefinedOrNull
+                  //     ? theme.colorScheme.secondary
+                  //     : item.enabledColor!,
+                  // // ---------------------------------------------
                 )
               : BorderSide.none,
         ),
