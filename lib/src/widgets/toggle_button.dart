@@ -34,7 +34,12 @@ class ToggleButton extends StatelessWidget {
     final style = TextButton.styleFrom(
       foregroundColor: enabled
           ? enabledColor ?? theme.colorScheme.secondary
+          // * 수정한 부분 - 비활성화 탭 텍스트 색상 변경
+          // [ 원본 코드  ]
+          // : theme.disabledColor,
+          // [ 변경 코드 ]
           : theme.textTheme.displaySmall?.color?.withOpacity(.5),
+      // --------------------------------------------------------
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.zero,
       ),
