@@ -1,7 +1,6 @@
 library pluto_layout_tabs;
 
 import 'dart:async';
-import 'dart:js_interop';
 import 'dart:math';
 
 import 'package:collection/collection.dart';
@@ -28,7 +27,7 @@ part 'pluto_layout_tabs_or_child.dart';
 
 final _focusedItemIdViewProvider = StateProvider<Object?>((ref) => null);
 
-/// You can configure the tab view by passing it as a child of [PlutoLayoutContainer].
+/// [PlutoLayoutContainer]의 자식으로 전달하여 탭 보기를 구성할 수 있습니다.
 ///
 /// {@macro pluto_layout_example}
 class PlutoLayoutTabs extends ConsumerWidget {
@@ -200,7 +199,8 @@ class PlutoLayoutTabs extends ConsumerWidget {
 
     final child = DecoratedBox(
       decoration: BoxDecoration(
-        color: theme.dialogBackgroundColor,
+        // color: theme.dialogBackgroundColor,
+        color: theme.textTheme.displaySmall?.color?.withOpacity(.5),
         border: Border(
           top: containerDirection.isBottom ? border : BorderSide.none,
           left: containerDirection.isRight ? border : BorderSide.none,
