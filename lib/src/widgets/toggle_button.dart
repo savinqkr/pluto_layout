@@ -34,7 +34,7 @@ class ToggleButton extends StatelessWidget {
     final style = TextButton.styleFrom(
       foregroundColor: enabled
           ? enabledColor ?? theme.colorScheme.secondary
-          : theme.disabledColor,
+          : theme.textTheme.displaySmall?.color?.withOpacity(.5),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.zero,
       ),

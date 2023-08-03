@@ -199,10 +199,7 @@ class PlutoLayoutTabs extends ConsumerWidget {
 
     final child = DecoratedBox(
       decoration: BoxDecoration(
-        // * 수정한 부분
-        // 비활성화된 탭 타이틀 색상 변경
-        // color: theme.dialogBackgroundColor,
-        color: Colors.blue.shade400,
+        color: theme.dialogBackgroundColor,
         border: Border(
           top: containerDirection.isBottom ? border : BorderSide.none,
           left: containerDirection.isRight ? border : BorderSide.none,
